@@ -45,14 +45,16 @@ Citizen.CreateThread(function()
         local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
         local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, Config.Position)
 
-        if dist <= 3 then
-            interval = 1
-            draw2dText(("Appuyez sur [~r~E~s~] pour intéragir avec votre plaque"), { 0.39, 0.95 } )
-            --ESX.ShowHelpNotification("Appuyez sur [~b~E~w~] pour ~b~intéragir")
-            if IsControlJustPressed(1,51) then
-                tFakePlate()
+        if IsPedInAnyVehicle(PlayerPedId(), false) then
+            if dist <= 3 then
+                interval = 1
+                draw2dText(("Appuyez sur [~r~E~s~] pour intéragir avec votre plaque"), { 0.39, 0.95 } )
+                --ESX.ShowHelpNotification("Appuyez sur [~b~E~w~] pour ~b~intéragir")
+                if IsControlJustPressed(1,51) then
+                    tFakePlate()
+                end
+        
             end
-     
         end
 
         Citizen.Wait(interval)
