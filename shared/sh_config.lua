@@ -36,6 +36,9 @@ Config.Events = {
     ["esx:showNotification"] = "esx:showNotification"
 }
 
+-- Bannière sur le menu
+Config.BannerName = "Plaque"
+
 -- Prix pour modifier la plaque
 Config.PriceChangePlate = 2000
 

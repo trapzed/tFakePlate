@@ -8,7 +8,7 @@ Citizen.CreateThread(function()
 end)
 
 function tFakePlate()
-    local tFakePlate = RageUI.CreateMenu(Config.PedName, "tFakePlate")
+    local tFakePlate = RageUI.CreateMenu(Config.BannerName, "tFakePlate")
 
     RageUI.Visible(tFakePlate, not RageUI.Visible(tFakePlate))
 
